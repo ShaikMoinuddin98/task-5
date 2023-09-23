@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+    <style>
+      body {
+        margin: 0%;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .maindash {
+        display: flex;
+      }
+      .firstbox {
+        background-color: #e4fbe7;
+        height: auto;
+        width: 700px;
+      }
+      .secondbox {
+        width: 1000px;
+        height: 100%;
+        background-color: #5c9c70;
+      }
+      .thirdbox {
+        background-color: #e4fbe7;
+        height: auto;
+        width: 500px;
+      }
+      .logodiv {
+        display: flex;
+        justify-content: flex-start;
+        /* align-items: center; */
+        padding-left: 20%;
+      }
+      a {
+        text-decoration: none;
+      }
+      #searchitems {
+        width: 400px;
+        height: 40px;
+      }
+      .search {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #d1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 47px;
+        height: 42px;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+        background-color: white;
+      }
+      #d2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 47px;
+        height: 42px;
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+        background-color: white;
+      }
+      .dropbtn {
+        background-color: #5c9c70;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+    
+      }
+      .modihover:hover{
+        margin-bottom:15%;
+      }
+      .livefeedimg {
+        margin-left: 15%;
+      }
+      #stocklefthd {
+        color: white;
+        font-size: x-large;
+        margin-left: 3%;
+      }
+      .countblock {
+        width: 240px;
+        height: 87px;
+        background-color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-left: 2%;
+        border-radius: 7%;
+      }
+      .countbox {
+        display: flex;
+        justify-content: space-around;
+      }
+      #nmbr {
+        font-size: x-large;
+      }
+      #s1 {
+        color: #8a97a4;
+        font-size: x-large;
+        margin: 0%;
+      }
+      #notcrle {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .prof {
+        background-color: white;
+        width: 243px;
+        height: 50px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .profimg {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+      }
+      .b1 {
+        display: flex;
+        justify-content: space-around;
+      }
+      .accept {
+        width: 300px;
+        height: 80px;
+        background-color: white;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        margin-left: 3%;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+      }
+      .x {
+        width: 270px;
+        color: #04570d;
+        padding: 3%;
+        margin: 0%;
+        margin-left: 4%;
+        background-color: #8a97a4;
+        text-align: center;
+        border-radius: 5%;
+      }
+      .reject {
+        width: 300px;
+        height: 80px;
+        background-color: white;
+        margin-left: 3%;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+      }
+      .modify
+      {
+        width: 300px;
+        height: 80px;
+        background-color: white;
+        margin-left: 3%;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+      #help {
+        margin-left: 2%;
+      }
+      .stockdata {
+        display: flex;
+        justify-content: space-around;
+      }
+      .d1 {
+        width: 96px;
+        height: 140px;
+
+      }
+
+      .stockinfo {
+        display: flex;
+        justify-content: space-around;
+      }
+      .info1 {
+        color: white;
+      }
+      .c1 {
+        width: 70px;
+        height: 70px;
+        border-radius: 50px;
+        background-image: url("./person.png");
+        background-size: cover;
+      }
+      .c2 {
+        width: 70px;
+        height: 70px;
+        border-radius: 50px;
+        background-image: url("./person.png");
+        background-size: cover;      }
+      .c3 {
+        width: 70px;
+        height: 70px;
+        border-radius: 50px;
+        background-image: url("./person.png");
+        background-size: cover;      }
+      .c4 {
+        width: 70px;
+        height: 70px;
+        border-radius: 50px;
+        background-image: url("./person.png");
+        background-size: cover;      }
+      .c5 {
+        width: 70px;
+        height: 70px;
+        border-radius: 50px;
+        background-image: url("./person.png");
+        background-size: cover;      }
+      .st:hover 
+      {
+        background-color: rgb(86, 247, 86);
+        /* border-radius: 60%; */
+        padding: 3%;
+        
+        transition: 0.3s ease-in 0s;
+        border-radius: 20px;
+      }
+      #n1
+      {
+        margin: 5%;
+        text-align: center;
+      }
+      #n2
+      {
+        margin: 5%;
+        text-align: center;
+      }
+      #n3
+      {
+        margin: 5%;
+        text-align: center;
+      }
+      #n4
+      {
+        margin: 5%;
+        text-align: center;
+      }
+      #n5
+      {
+        margin: 5%;
+        text-align: center;
+      }
+      .d1:hover
+      {
+        transform: scale(1.1);
+        transition: 0.4s ease-in-out 0.1s;
+      }
+      label:hover
+      {
+
+        background-color: lightgreen;
+        transition: 0.3s ease-in 0.1s;
+        border-radius: 20px;
+        padding: 2px;
+      }
+      #help:hover
+      {
+        font-size: large;
+        transition: 0.2s ease-in-out 0.1s;
+      }
+      .profimg:hover
+      {
+        transform: scale(1.3);
+        transition: 0.3s ease-in-out 0.1s; 
+      }
+      .swiper-wrapper
+      {
+        text-align: center;
+      }
+      .swiper-button-prev
+      {
+        color: white;
+        
+      }
+      .swiper-button-next
+      {
+        color: white
+        ;
+      }
+      .s2
+      {
+        display: flex;
+        justify-content: center;
+      }
+      .s1 :hover
+      {
+        transform: scale(1.05);
+        transition: 0.3s ease-in 0.1s;
+        border: none;
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="maindash">
+      <div class="firstbox">
+        <div class="logodiv">
+          <img
+            src="./20d43e1c-d0e8-40de-a10d-30cc556de3cc.jpg"
+            alt=""
+            height="100px"
+            width="100px"
+            style="border-radius: 50%"
+          />
+        </div>
+        <br />
+        <br />
+        <div class="logodiv">
+          <a href="" id="homelink" class="st"
+            ><i
+              class="fa-solid fa-house"
+              style="color: #1e3152; font-size: large"
+            ></i>
+            <b style="font-size: large">Home</b></a
+          >
+        </div>
+        <br />
+        <br />
+        <div class="logodiv">
+          <a href="" id="stocklink" style="text-decoration: none" class="st"
+            ><i
+              class="fa-solid fa-cubes-stacked"
+              style="font-size: large"
+            ></i>
+            <b style="font-size: large">Add Stock</b></a
+          >
+        </div>
+        <br />
+        <br />
+        <div class="logodiv">
+          <a href="" id="resourcelink" class="st"
+            ><i
+              class="fa-solid fa-cart-shopping"
+              style="font-size: large"
+            ></i>
+            <b style="font-size: large">Resources</b></a
+          >
+        </div>
+        <br />
+        <br />
+        <div class="logodiv">
+          <a href="" id="translink" class="st"
+            ><i
+              class="fa-solid fa-indian-rupee-sign"
+              style="font-size: large"
+            ></i>
+            <b style="font-size: large">Transactions</b></a
+          >
+        </div>
+        <br />
+        <br />
+        <div class="logodiv">
+          <a href="" id="commlink" class="st"
+            ><i class="fa-solid fa-user-group" style="font-size: large"></i>
+            <b style="font-size: large">Community</b></a
+          >
+        </div>
+        <br />
+        <br />
+        <div class="logodiv">
+          <a href="" id="helplink" class="st"
+            ><i class="fa-solid fa-users" style="font-size: large"></i>
+            <b style="font-size: large">Help</b></a
+          >
+        </div>
+        <br />
+        <br />
+        <div class="logodiv">
+          <a href="" id="locationlink" class="st"
+            ><i
+              class="fa-solid fa-location-dot"
+              style="color: #263b5f; font-size: large"
+            ></i>
+            <b style="font-size: large">Location map</b></a
+          >
+        </div>
+        <br />
+        <br />
+        <div class="logodiv">
+          <a href="" id="logoutlink" style="font-size: large" class="st"
+            ><b>Log Out</b></a
+          >
+        </div>
+      </div>
+      <div class="secondbox">
+        <div class="search">
+          <div class="s1">
+            <div class="s2">
+          <div id="d2"></div>
+          <input
+            type="text"
+            id="searchitems"
+            placeholder="Search Stock"
+            style="border: none"
+          />
+          <a href="" id="searchbutton">
+            <div id="d1">
+              <i
+                class="fa-solid fa-magnifying-glass"
+                style="font-size: x-large"
+              ></i>
+            </div>
+          </a>
+            </div>
+          </div>
+        </div>
+        <br />
+        <!-- <div class="livefeedimg">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7MogblHqzH3USRsbtlA6Z6gDymDI-Yo0Irw&usqp=CAU"
+            alt=""
+            width="700px"
+            height="400px"
+          />
+        </div> -->
+        <div class="swiper" style="width: 700pxpx; height: 400px;">
+        
+          <div class="swiper-wrapper">
+          
+            <div class="swiper-slide"><img src="./wp1987046-farms-wallpapers.jpg" alt="" width="700px" height="400px"></div>
+            <div class="swiper-slide"><img src="./wp1987047-farms-wallpapers.jpg" alt="" width="700px" height="400px"></div>
+            <div class="swiper-slide"><img src="./wp1987053-farms-wallpapers.jpg" alt="" width="700px" height="400px"></div>
+            
+
+            ...
+          </div>
+          <div class="swiper-pagination"></div>
+        
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        
+        </div>
+        
+        <span id="stocklefthd"><b>Stock Left</b></span>
+        <div class="dropdown">
+          <button class="dropbtn">
+            <span style="font-size: large; color: #c9ffce">View all</span>
+          </button>
+
+          <div class="dropdown-content">
+            <a href="#" id="stock1">Link 1</a>
+            <a href="#" id="stock2">Link 2</a>
+            <a href="#" id="stock3">Link 3</a>
+          </div>
+        </div>
+        <div class="stockdata">
+          <div class="d1"><a href="" id="item1" class="info1"><img src="./bittergourd.webp" alt="" width="96px" height="140px"><p id="n1">Bittergourd</p></a></div>
+          <div class="d1"><a href="" id="item2" class="info1"><img src="./bottle guord.jpg" alt="" width="96px" height="140px"><p id="n2">Bottlegourd</p></a></div>
+          <div class="d1"><a href="" id="item3" class="info1"><img src="./brinjal.webp" alt="" width="96px" height="140px"><p id="n3">Brinjal</p></a></div>
+          <div class="d1"><a href="" id="item4" class="info1"><img src="./onions.jpg" alt="" width="96px" height="140px"><p id="n4">Onions</p></a></div>
+          <div class="d1"><a href="" id="item5" class="info1"><img src="./coriander.jpg" alt="" width="96px" height="140px"><p id="n5">Corainder</p></a></div>
+        </div>
+        <br />
+        <!-- <div class="stockinfo">
+          <a href="" id="item1" class="info1">Bittergourd</a>
+          <a href="" id="item2" class="info1">BottleGourd</a>
+          <a href="" id="item3" class="info1">Brinjal</a>
+          <a href="" id="item4" class="info1">onions</a>
+          <a href="" id="item5" class="info1">Corainder</a>
+        </div> -->
+        <br>
+        <hr />
+        <span style="font-size: x-large; color: white; margin-left: 2%"
+          ><b>Customers</b></span
+        >
+        <div class="dropdown">
+          <button class="dropbtn">
+            <span style="font-size: large; color: #c9ffce">View all</span>
+          </button>
+
+          <div class="dropdown-content">
+            <a href="#" id="pers1">Link 1</a>
+            <a href="#" id="pers2">Link 2</a>
+            <a href="#" id="pers3">Link 3</a>
+          </div>
+        </div>
+        <!-- <div class="stockdata">
+          <div class="c1">
+          </div>
+          <div class="c2"></div>
+          <div class="c3"></div>
+          <div class="c4"></div>
+          <div class="c5"></div>
+        </div>
+        <br />
+
+        <div class="stockinfo">
+          <a href="" id="per1" class="info1">person1</a>
+          <a href="" id="per2" class="info1">person2</a>
+          <a href="" id="per3" class="info1">person3</a>
+          <a href="" id="per4" class="info1">person4</a>
+          <a href="" id="per5" class="info1">person5</a>
+        </div> -->
+        <div class="stockdata">
+          <div class="d1"><a href="" id="p1" class="info1"><img src="./person.png" alt="" width="70px" height="70px" style="border-radius: 50%;"><p id="p1">person1</p></a></div>
+          <div class="d1"><a href="" id="p2" class="info1"><img src="./person.png" alt="" width="70px" height="70px"style="border-radius: 50%;"><p id="p2">person2</p></a></div>
+          <div class="d1"><a href="" id="p3" class="info1"><img src="./person.png" alt="" width="70px" height="70px" style="border-radius: 50%;"><p id="p3">person3</p></a></div>
+          <div class="d1"><a href="" id="p4" class="info1"><img src="./person.png"eb alt="" width="70px" height="70px" style="border-radius: 50%;"><p id="p4">person4</p></a></div>
+          <div class="d1"><a href="" id="p5" class="info1"><img src="./person.png" alt="" width="70px" height="70px" style="border-radius: 50%;"><p id="p5">person5</p></a></div>
+        </div>
+        <br />
+        <br />
+        <!-- <div class="countbox">
+          <div class="countblock">
+            <img src="./customer.jpg" alt="" width="70px" height="70px" />
+            <div class="count">
+              <b id="nmbr">1</b>
+              <p id="s1">Stocks</p>
+            </div>
+          </div>
+          <div class="countblock">
+            <img src="./author.png" alt="" width="70px" height="70px" />
+            <div class="count">
+              <b id="auth" style="font-size: x-large">1</b>
+              <p id="s1">Author</p>
+            </div>
+          </div>
+          <div class="countblock">
+            <img src="./blocks.jpg" alt="" width="70px" height="70px" />
+            <div class="count">
+              <b id="blks" style="font-size: x-large">1</b>
+              <p id="s1">Blocks</p>
+            </div>
+          </div>
+        </div> -->
+      </div>
+      <div class="thirdbox">
+        <div class="b1">
+          <div id="notcrle">
+            <i class="fa-solid fa-bell" style="color: #26c038"></i>
+          </div>
+          <div class="prof">
+            <div class="profimg"><img src="./person.png" alt="" id="profacc" style="width: 30px; height: 30px; border-radius: 50%;"></div>
+            <span id="profname">Name</span>
+            <div class="dropdown">
+              <button
+                class="dropbtn"
+                style="background-color: white; height: 50px"
+              >
+                <span style="font-size: large; color: #00ff19"
+                  ><i class="fa-solid fa-bars" style="color: #349840"></i
+                ></span>
+              </button>
+
+              <div class="dropdown-content">
+                <a href="#" id="stock1">Link 1</a>
+                <a href="#" id="stock2">Link 2</a>
+                <a href="#" id="stock3">Link 3</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <div class="accept">
+          <label for="acc" style="display: block;">
+            <input type="radio" id="acc" name="status" />
+            <b style="font-size: large">Accept order</b>
+          </label>
+        </div>
+      
+        <div class="reject">
+          <label for="rej">
+            <input type="radio" id="rej" name="status" />
+            <b style="font-size: large">reject</b>
+          </label>
+        </div>
+        <div class="modify modihover">
+          <div class="dropdown">
+            <button class="dropbtn" style="background-color:white; padding: 0%;">
+              
+                <label for="modiifi">
+             
+                <input type="radio" id="modiifi" name="status"/><b style="font-size: large ; width: 100px; color: black; ">Modify Order</b>
+                </label>
+            </button>
+            
+            <div class="dropdown-content" >
+              <div class="accept" style="width: 150px; height: 50px;">
+              <label for="modi1">
+                  <input type="radio" id="modi1" name="modi" />
+                  <b id="" style="font-size: large">Change Stock</b>
+                </label>
+              </div>
+            
+              <div class="accept" style="width: 300px; height: 50px;">
+                <label for="modi2">
+                  <input type="radio" id="modi2" name="modi" />
+                  <b id="stock2" style="font-size: large"
+                    >change delivery type</b
+                  >
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- </div> -->
+        <a href="" id="help">
+          <h2 style=" margin-left: 5%">Help</h2>
+        </a>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper('.swiper', {
+        autoplay:
+        {
+          delay:2000,
+          disableOnInteraction :false,
+        },
+  // Optional parameters
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable:true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+    </script>
+  </body>
+</html>

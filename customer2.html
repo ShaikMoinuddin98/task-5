@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <style>
+      * {
+        margin: 0%;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      body {
+        background-color: #5c9c70;
+      }
+      .main {
+        display: flex;
+      }
+      .firstbox {
+        width: 200px;
+        height: 100vh;
+        background-color: #e4fbe7;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+      .logodiv {
+        display: flex;
+        justify-content: center;
+      }
+      a {
+        text-decoration: none;
+        color: rgb(62, 61, 61);
+      }
+      .firstboxcont {
+        display: flex;
+        justify-content: flex-start;
+      }
+      #homelink:hover {
+        border-radius: 10px;
+        background-color: rgb(122, 250, 122);
+      }
+      /* .dropdown:hover
+        {
+            border-radius: 10px;
+            background-color: rgb(122, 250, 122);
+        } */
+
+      .dropbtn {
+        padding: 5px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        background-color: white;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      .f1:hover {
+        margin-bottom: 90%;
+      }
+      .navbar {
+        width: 100%;
+        height: 60px;
+        background-color: rgb(7, 66, 7);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .person {
+        width: 120px;
+        height: 30px;
+        background-color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 20px;
+      }
+      .icondiv {
+        height: 32px;
+        width: 40px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+      .searchbox {
+        padding: 0%;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+      }
+      .content
+      {
+        margin-left: 6%;
+        display: flex;
+        justify-content: space-around;
+      }
+      .i1
+      {
+        width: 230px;
+        height: 230px;
+        background-color: white;
+        border-radius: 20px;
+    
+      }
+      .i1:hover
+      {
+        transform: scale(1.1);
+        transition: 0.5s ease-in-out 0.1s;
+      }
+      .i2
+      {
+        width: 230px;
+        height: 230px;
+        background-color: white;
+        border-radius: 20px;
+      }
+      .i2:hover
+      {
+        transform: scale(1.1);
+        transition: 0.5s ease-in-out 0.1s;
+      }
+      .i3
+      {
+        width: 230px;
+        height: 230px;
+        background-color: white;
+        border-radius: 20px;
+      }
+      .i3:hover
+      {
+        transform: scale(1.1);
+        transition: 0.5s ease-in-out 0.1s;
+      }
+      .secbox{
+        
+        width: 900px;
+      }
+      .box3
+      {
+        width: 400px;
+        background-color: white;
+        height: 600px;
+        border-radius: 30px;
+      }
+      .thirdbox
+      {
+        width:600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .thirdbox:hover
+      {
+        transform: scale(1.05);
+        transition: 0.5s ease-in-out 0.1s; 
+      }
+      #prod1
+      {
+        margin:  10%;
+        margin-bottom: 0%;
+        border-radius: 20px;
+      }
+      .mes1
+      {
+        display: flex;
+
+
+      }
+      .map
+      {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .mess
+      {
+        color: rgba(96, 96, 96, 0.803);
+      }
+
+     
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="person">
+        <a href="" id="accchange"></a
+        ><img
+          src="./person.png"
+          alt=""
+          width="30px"
+          height="30px"
+          style="border-radius: 50%"
+        />Moinuddin
+      </div>
+      <a href="" id="livefed" style="color: white">Live Feed</a>
+      <a href="" id="filtrs" style="color: white">Filters</a>
+      <a href="" id="pricing" style="color: white">Pricing</a>
+      <a href="" id="bulkorder" style="color: white">Bulk Order</a>
+      <a href="" id="contact" style="color: white">Contact</a>
+    </div>
+    <div class="main">
+      <div class="firstbox">
+        <div class="logodiv">
+          <img
+            src="./20d43e1c-d0e8-40de-a10d-30cc556de3cc.jpg"
+            alt=""
+            height="100px"
+            width="100px"
+            style="border-radius: 50%"
+          />
+        </div>
+        <br />
+        <div class="firstboxcont" style="padding: 5px">
+          <a href="" id="homelink" class="st"
+            ><i class="fa-solid fa-house"></i>
+            <b style="font-size: large">Home</b></a
+          >
+        </div>
+
+        <br />
+        <div class="firstboxcont">
+          <div class="dropdown f1">
+            <a href="" class="dropbtn" id="accbut">
+              <!-- <div class="firstboxcont"> -->
+              <i class="fa-solid fa-user"></i>
+              <b style="font-size: large">Account</b>
+            </a>
+
+            <div class="dropdown-content">
+              <a href="#" id="nm1">Name</a>
+              <a href="#" id="p1">Phone Number</a>
+              <a href="#" id="a1">Address</a>
+              <a href="#" id="pas1">Password</a>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="firstboxcont">
+          <div class="dropdown f1">
+            <a href="" class="dropbtn" id="ordbut">
+              <!-- <div class="firstboxcont"> -->
+              <i class="fa-solid fa-user"></i>
+              <b style="font-size: large">Orders</b>
+            </a>
+
+            <div class="dropdown-content">
+              <a href="#" id="st1">Status</a>
+              <a href="#" id="mernum">Merchant Number</a>
+              <a href="#" id="ordhis">Order History</a>
+              <a href="#" id="connectvty">Connectivity</a>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="firstboxcont" style="padding: 5px">
+          <a href="" id="homelink" class="st"
+            ><i class="fa-solid fa-phone"></i>
+            <b style="font-size: large">Help</b></a
+          >
+        </div>
+        <br />
+        <div class="firstboxcont">
+          <a href="" class="feed"
+            ><b style="font-size: large; padding: 5px">Feedback</b></a
+          >
+        </div>
+        <br />
+
+        <input
+          type="text"
+          id="feedtext"
+          style="padding-bottom: 5%; border-radius: 10px"
+        />
+      </div>
+      <div class="secbox">
+        <br />
+        <div class="searchbox">
+          <input
+            type="text"
+            id="search"
+            placeholder="Search Items"
+            style="
+              text-align: center;
+              width: 500px;
+              height: 30px;
+              border-top-left-radius: 20px;
+              border-bottom-left-radius: 20px;
+              border: none;
+            "
+          />
+          <div class="icondiv">
+            <a href="" id="searchbut"
+              ><i
+                class="fa-solid fa-magnifying-glass"
+                style="font-size: large"
+              ></i
+            ></a>
+          </div>
+
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="content">
+            <div class="i1">
+                <a href="">
+                <img src="./cauliflower.jpg" alt="" id="prod1" width="180px" height="130px">
+                <p style="margin: 2%;margin-left: 11%;" id="it1">
+                    <b>Cauliflower</b>
+                </p>
+                <p style="margin: 2%; margin-left: 11%;" id="mn1">₹100</p>
+                <p style=" margin: 2%; margin-left: 11%;" id="pl1">Madanapalle</p>
+                </a>
+            </div>
+            <div class="i2">
+                <a href="">
+                    <img src="./coriander.jpg" alt="" id="prod1" width="180px" height="130px">
+                    <p style="margin: 2%;margin-left: 11%;" id="it2">
+                        <b>Coriander</b>
+                    </p>
+                    <p style="margin: 2%; margin-left: 11%;" id="mn2">₹70</p>
+                    <p style=" margin: 2%; margin-left: 11%;" id="pl2">Madanapalle</p>
+                    </a>
+            </div>
+            <div class="i3">
+                <a href="">
+                    <img src="./wheat.jpg" alt="" id="prod1" width="180px" height="130px">
+                    <p style="margin: 2%;margin-left: 11%;" id="it3">
+                        <b>Wheat</b>
+                    </p>
+                    <p style="margin: 2%; margin-left: 11%;" id="mn3">₹200</p>
+                    <p style=" margin: 2%; margin-left: 11%;" id="pl3">Madanapalle</p>
+                    </a>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="content">
+            <div class="i1">
+                <a href="">
+                    <img src="./tomatoes.jpg" alt="" id="prod1" width="180px" height="130px">
+                    <p style="margin: 2%;margin-left: 11%;" id="it4">
+                        <b>Tomatoes</b>
+                    </p>
+                    <p style="margin: 2%; margin-left: 11%;" id="mn4">₹200</p>
+                    <p style=" margin: 2%; margin-left: 11%;" id="pl4">Madanapalle</p>
+                    </a>
+            </div>
+            <div class="i2">
+                <a href="">
+                    <img src="./onions.jpg" alt="" id="prod1" width="180px" height="130px">
+                    <p style="margin: 2%;margin-left: 11%;" id="it5">
+                        <b>Onions</b>
+                    </p>
+                    <p style="margin: 2%; margin-left: 11%;" id="mn5">₹100</p>
+                    <p style=" margin: 2%; margin-left: 11%;" id="pl5">Madanapalle</p>
+                    </a>
+            </div>
+            <div class="i3">
+                <a href="">
+                    <img src="./cabbage.jpg" alt="" id="prod1" width="180px" height="130px">
+                    <p style="margin: 2%;margin-left: 11%;" id="it6">
+                        <b>Cabbage</b>
+                    </p>
+                    <p style="margin: 2%; margin-left: 11%;" id="mn6">₹150</p>
+                    <p style=" margin: 2%; margin-left: 11%;" id="pl6">Madanapalle</p>
+                    </a>
+            </div>
+        </div>
+        <br />
+      </div>
+      <div class="thirdbox">
+        <div class="box3">
+            <h2 style="text-align: center; margin-top: 3%; color: rgb(75, 74, 74);">Recent Messages</h2>
+            <br>
+            <div class="mes1">
+            <div class="person" style="width: 70px;">
+                <img src="./person.png" alt="" width="50px" height="50px" style="border-radius: 50%;" id="img1">
+            </div>
+            <div class="txt">
+            <h3 id="name1">Moin</h3>
+            <p id="msg1" class="mess">Hello,there</p>
+            </div>
+            </div>
+            <br>
+            <div class="mes1">
+                <div class="person" style="width: 70px;">
+                    <img src="./person.png" alt="" width="50px" height="50px" style="border-radius: 50%;" id="img2">
+                </div>
+                <div class="txt">
+                <h3 id="name2">Jack</h3>
+                <p id="msg2" class="mess">How,are u</p>
+                </div>
+                </div>
+            <br>
+            <div class="mes1">
+                <div class="person" style="width: 70px;">
+                    <img src="./person.png" alt="" width="50px" height="50px" style="border-radius: 50%;" id="img3">
+                </div>
+                <div class="txt">
+                <h3 id="name3">Robert</h3>
+                <p id="msg3" class="mess">Need, ur help</p>
+                </div>
+                </div>
+            <br>
+            <h2 style="text-align: center; color:rgb(75, 74, 74) ;">Map View</h2>
+            <br>
+            <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31029.247531036322!2d78.48687774693559!3d13.556685426390136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb265dbe6967fc1%3A0xb63fc0bc28149f4c!2sMadanapalle%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1695489067365!5m2!1sen!2sin" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+      </div>
+        
+
+        
+  </body>
+</html>

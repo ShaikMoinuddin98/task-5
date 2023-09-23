@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+      body {
+        background-color: rgb(174, 239, 174);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      a {
+        text-decoration: none;
+      }
+      #newacc {
+        text-align: center;
+      }
+      .signuppage {
+        background-color: beige;
+      
+        
+        border: 2px solid green;
+        border-radius: 10%;
+        padding-left: 2%;
+        padding-right: 2%;
+        display: flex;
+      }
+      .signuppage:hover
+      {
+        transform: scale(1.1);
+        transition: 0.5s ease-in-out 0.1s;
+        border: 2px solid green;  
+      }
+      .n1 {
+        color: rgb(42, 39, 39);
+      }
+      #upname {
+        width: 300px;
+        height: 30px;
+        text-align: center;
+      }
+      #upname:hover
+      {
+        transform: scale(1.1);
+        transition: 0.4s ease-in 0.1s;
+        border: 2px solid green;  
+      }
+      #upmail {
+        width: 300px;
+        height: 30px;
+        text-align: center;
+        
+      }
+      #upmail:hover
+      {
+        transform: scale(1.1);
+        transition: 0.4s ease-in 0.1s;
+        border: 2px solid green; 
+        border: 2px solid green; 
+      }
+      #uppass {
+        width: 300px;
+        height: 30px;
+        text-align: center;
+      }
+      #uppass:hover
+      {
+        transform: scale(1.1);
+        transition: 0.4s ease-in 0.1s; 
+        border: 2px solid green; 
+      }
+      #upretrypass {
+        width: 300px;
+        height: 30px;
+        text-align: center;
+      }
+      #upretrypass:hover
+      {
+        transform: scale(1.1);
+        transition: 0.4s ease-in 0.1s;
+        border: 2px solid green;  
+      }
+      #upphone {
+        width: 300px;
+        height: 30px;
+        text-align: center;
+      }
+      #upphone:hover
+      {
+        transform: scale(1.1);
+        transition: 0.4s ease-in 0.1s; 
+        border: 2px solid green; 
+      }
+      #signupbutton {
+        width: 350px;
+        height: 40px;
+        font-size: larger;
+        color: white;
+        background-color: rgb(3, 88, 3);
+      }
+      #signupbutton:hover
+      {
+        transform: scale(1.1);
+        transition: 0.4s ease-in 0.1s; 
+      }
+      #signupggle {
+        width: 150px;
+        height: 40px;
+        font-size: larger;
+        color: white;
+        background-color: rgb(215, 243, 215);
+        margin-left: 3%;
+        font-size: small;
+        color: blue;
+      }
+      #signupfb {
+        width: 150px;
+        height: 40px;
+        font-size: larger;
+        color: white;
+        background-color: rgb(215, 243, 215);
+        margin-left: 3%;
+        font-size: small;
+        color: rgb(0, 102, 255);
+      }
+      .main
+      {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #logo
+      {
+        border-radius: 50%;
+        margin-right: 1%;
+      }
+      .m1
+      {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .f
+      {
+        margin-top: 250%;
+        
+      }
+      #one
+      {
+        margin-bottom: 50%;
+        
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="m1">
+    <img src="./20d43e1c-d0e8-40de-a10d-30cc556de3cc.jpg" alt="" width="100px" height="100px" id="logo">
+    <h1>Crop Tech</h1>
+    </div>
+    <br>
+    <br>
+    <div class="main">
+    <div class="signuppage">
+      <div class="first">
+      <h1 id="newacc">Create a New Account</h1>
+      <br />
+      <p class="n1">Full Name</p>
+      <input type="text" id="upname" placeholder="Enter Your Full Name" />
+      <p class="n1">Email</p>
+      <input type="email" id="upmail" placeholder="Enter Your Email" />
+      <p class="n1">Password</p>
+      <input type="password" id="uppass" placeholder="Enter Your Password" />
+      <!-- <label for="1">
+        <input type="checkbox" id="1" onclick="myfunc()" />Show password
+      </label> -->
+      <p class="n1">Re-enter Password</p>
+      <input type="password" id="upretrypass" placeholder="Re-enter Password" />
+      <!-- <label for="2">
+        <input type="checkbox" id="2" onclick="myfunc()" />Show password
+      </label> -->
+      <p class="n1">Phone Number</p>
+      <input type="number" id="upphone" placeholder="Enter Your Phone Number" />
+      <br />
+      <br />
+      <a href="customer.html"><button id="signupbutton">Sign-Up</button></a>
+      <br />
+      <br />
+      <!-- <button id="signupggle">SignUp With Google</button>
+        <button id="signupfb">Sign up With Facebook</button> -->
+      <br />
+      <br />
+      </div>
+      <div class="second">
+        <div class="f">
+        <label for="one">
+        <input type="checkbox" id="one" onclick="myfunc()" />Show password
+      </label>
+      <br>
+      <label for="2">
+        <input type="checkbox" id="2" onclick="myfunc()" />Show password
+      </label>
+        </div>
+      </div>
+    </div>
+      <script>
+        function myfunc() {
+          var x = document.getElementById("uppass");
+          var y = document.getElementById("upretrypass");
+          if (x.type === "password") {
+            x.type = "text";
+          } else if (y.type === "password") {
+            y.type = "text";
+          } else {
+            x.type = "password";
+            y.type = "password";
+          }
+        }
+      </script>
+    </div>
+  </body>
+</html>
